@@ -8,28 +8,9 @@ In an rule engine, a simple rule could be like:
 
 ```json
 {
-    'fact': 'index',
-    'operator': 'greaterThan',
-    'value': 100
-}
-```
-
-But acctually, A rule shoud be 
-
-```json
-{
-    'and': [
-        {
-           'fact': 'index',
-            'operator': 'greaterThan',
-            'value': 100 
-        }, 
-        {
-            'fact': 'deviceName',
-            'operator': 'equals',
-            'value': 'sensor'
-        }
-    ]
+    "fact": "index",
+    "operator": "greaterThan",
+    "value": 4000
 }
 ```
 When rules grows, it is very slow for node.js and other javascript engine to work out it. Streaming messages could happens at a very high speed. We need a more effective library to get it done. It is why rule.js emerge and what it solves.
